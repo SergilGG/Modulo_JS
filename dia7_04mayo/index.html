@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dom</title>
+        <script defer src="./js/main_2.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="text-center">Bienvenido a Cinemex</h1>
+            </div>
+            <div>
+                <h2>Cartelera</h2>
+                <h4>
+                    Costo boleto general: $100
+                </h4>
+                <div id="elementoPadre" class="row">
+                    <div class="col-4 d-flex flex-column">
+                        <h3>Ciudad Perdida</h3>
+                        <h5>90 min</h5>
+                        <h6>Disponibilidad: 6 asientos</h6>
+                        <img src="./img/ciudadPerdida.jpg" alt="" />
+                        <button id="boton1" data-pelicula="Ciudad Perdida" data-disponibilidad="Aún hay 6" ">
+                            Comprar Boleto
+                        </button>
+                    </div>
+                    <div class="col-4 d-flex flex-column lunaticos">
+                        <h3>Thor</h3>
+                        <h5>120 min</h5>
+                        <h6>Disponibilidad: 4 asientos</h6>
+                        <img src="./img/Thor.jpg" alt="" />
+                        <button id="boton2" data-pelicula="Thor" data-disponibilidad="Aún hay 4">
+                            Comprar Boleto
+                        </button>
+                    </div>
+                    <div class="col-4 d-flex flex-column lunaticos">
+                        <h3>Lunaticos</h3>
+                        <h5>100 min</h5>
+                        <h6>Disponibilidad: 2 asientos</h6>
+                        <img src="./img/Lunaticos.jpg" alt="" />
+                        <button id="boton3" data-pelicula="Lunaticos" data-disponibilidad="Aún hay 2">
+                            Comprar Boleto
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="Formulario" class="m-5">
+                <h2>Favor de llenar todos los datos</h2>
+                <form class="d-flex flex-column">
+                    <label>
+                        <input
+                            id="FormularioNombre"
+                            type="text"
+                            placeholder="Nombre"
+                            class="form-control mb-2"
+                        />
+                    </label>
+                    <label>
+                        <input
+                            id="FormularioBoletos_Dispo"
+                            type="text"
+                            placeholder="Disponibilidad"
+                            class="form-control mb-2"
+                        />
+                    </label>
+
+                    <label>
+                        <input
+                            id="FormularioPelicula"
+                            type="text"
+                            placeholder="Pelicula"
+                            class="form-control mb-2"
+                        />
+                    </label>
+                    <label>
+                        <input
+                            id="FormularioCantidadBoletos"
+                            type="number"
+                            placeholder="Cantidad de Boletos"
+                            class="form-control mb-2"
+                        />
+                    </label>
+                    <label>
+                        <input
+                            id="FormularioMonto"
+                            type="text"
+                            placeholder="Monto"
+                            class="form-control mb-2"
+                        />
+                    </label>
+                    <label>
+                        <input
+                            id="FormularioTotal"
+                            type="text"
+                            placeholder="Total"
+                            class="form-control mb-2"
+                            disabled
+                        />
+                    </label>
+                    <button
+                        id="FormularioSubmit"
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
