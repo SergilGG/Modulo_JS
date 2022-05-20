@@ -5,25 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Bienvenido a Cashito</h1>
-    <h2>El banco de tus sueños</h2>
+    <h1 class="text-center mt-4">Bienvenido a Cashito</h1>
+    <h2 class="text-center mt-2">El banco de tus sueños</h2>
 
-
-    <label for="">Saldo disponible: </label>
-    <input type="text" name="balance" id="balance_id" value="0">
-
-
-    <form action="">
-        <input type="text" name="" id="quantity_id" placeholder="quantity">
-        <hr>
-        <input type="button" value="Retiro" id="withdrawal" onclick="withdrawal()">
-        <input type="button" value="Depósito" id="deposit_id" onclick="deposit()">
-
-
-</form>
+    <div class="text-center mt-4">
+        <label for="" class="text-center mt-4 ">Saldo disponible: </label>
+        <input class="text-center form-control" type="text" name="balance" id="balance_id" value="0" readonly="readonly">
+        
+    </div>
     
-    <script src="./main.js"></script>
+    
+    <div class="container-xl text-center"  >
+        <form action="" id="form1">
+
+            <div class="input-group mb-1 mt-2">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" id="quantity_id"  aria-label="Amount (to the nearest dollar)" placeholder="Cantidad">
+                <span class="input-group-text">.00</span>
+              </div>
+
+            <hr>
+    
+            <input class="btn btn-primary m-2" type="button" value="Retiro" id="get_cash_id" onclick="getCash()">
+    
+            <input type="button" value="Depósito" class="btn btn-primary m-2" id="deposit_id" onclick="deposit()">
+        </form>
+    
+        <input type="button" value="Cerrar sesión" id="return_id" class="btn btn-secondary btn-lg m-2" onclick="returnHomePage()">
+
+
+
+    </div>
+    
+    
+    
+    <script src="./main_2.js"></script>
+    <style>
+        body{
+    font-family: 'Roboto';
+    background: #77A1D3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 700px;
+    
+}
+    </style>
 </body>
 </html>
